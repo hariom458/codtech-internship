@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeVerse - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#practice">Practice</a>
+      <a href="login.html" id="login-link">Login</a>
+      <a href="signup.html" id="signup-link" class="btn-nav">Signup</a>
+      <a href="#" id="logout-link" style="display: none;">Logout</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Welcome to CodeVerse 🚀</h1>
+    <p class="hero-subtext">
+      Master the universe of code with interactive lessons, real-time feedback, and skill certification.
+    </p>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature">💻 Interactive Coding Labs</div>
+    <div class="feature">📚 Curated Learning Paths</div>
+    <div class="feature">🤖 AI-Powered Assistance</div>
+    <div class="feature">🏅 Sharable Certificates</div>
+  </section>
+
+  <section id="practice" class="container">
+    <h2>Test Your Knowledge</h2>
+    <form id="quiz-form">
+      <div class="quiz-question">
+        <p><b>Q1:</b> What is CSS primarily used for?</p>
+        <label><input type="radio" name="q1" value="wrong"> Server-side logic</label>
+        <label><input type="radio" name="q1" value="correct"> Styling web pages</label>
+        <label><input type="radio" name="q1" value="wrong"> Database management</label>
+      </div>
+
+      <div class="quiz-question">
+        <p><b>Q2:</b> Which of the following is a version control system?</p>
+        <label><input type="radio" name="q2" value="wrong"> Node.js</label>
+        <label><input type="radio" name="q2" value="wrong"> Docker</label>
+        <label><input type="radio" name="q2" value="correct"> Git</label>
+      </div>
+
+      <div class="quiz-question">
+        <p><b>Q3:</b> What does API stand for?</p>
+        <label><input type="radio" name="q3" value="correct"> Application Programming Interface</label>
+        <label><input type="radio" name="q3" value="wrong"> Automated Programming Instruction</label>
+        <label><input type="radio" name="q3" value="wrong"> Application Process Integration</label>
+      </div>
+      
+      <div class="quiz-question">
+        <p><b>Q4:</b> In JavaScript, which keyword is used to declare a variable that cannot be reassigned?</p>
+        <label><input type="radio" name="q4" value="wrong"> var</label>
+        <label><input type="radio" name="q4" value="correct"> const</label>
+        <label><input type="radio" name="q4" value="wrong"> let</label>
+      </div>
+
+      <div class="quiz-question">
+        <p><b>Q5:</b> Which HTML element is used to specify a header for a document or section?</p>
+        <label><input type="radio" name="q5" value="wrong"> &lt;h1&gt;</label>
+        <label><input type="radio" name="q5" value="correct"> &lt;header&gt;</label>
+        <label><input type="radio" name="q5" value="wrong"> &lt;head&gt;</label>
+      </div>
+
+      <button type="submit" class="btn">Submit Answers</button>
+    </form>
+
+    <div id="quiz-result"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 CodeVerse. Chart Your Course in Code.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

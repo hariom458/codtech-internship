@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - CodeVerse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container auth-container">
+    <h1>CodeVerse Login</h1>
+
+    <div class="login-box">
+      <form id="login-form">
+        <input id="email" type="email" placeholder="Email Address" required /><br /><br />
+        <input id="password" type="password" placeholder="Password" required /><br /><br />
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <p class="form-switch">Don't have an account? <a href="signup.html">Signup here</a></p>
+      <div id="message"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const messageDiv = document.getElementById('message');
+
+      // Get users from localStorage
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+
+      // Find user with matching credentials
+      const foundUser = users.find(user => user.email === email && user.password === password);
+
+      if (foundUser) {
+        // Store logged-in user's email to track session
+        localStorage.setItem('loggedInUser', foundUser.email);
+        messageDiv.textContent = 'Login Successful! Redirecting...';
+        messageDiv.style.color = 'green';
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1500);
+      } else {
+        messageDiv.textContent = 'Invalid email or password.';
+        messageDiv.style.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>

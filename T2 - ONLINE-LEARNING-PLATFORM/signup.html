@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signup - CodeVerse</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container auth-container">
+    <h1>Create Your CodeVerse Account</h1>
+
+    <div class="login-box">
+        <form id="signup-form">
+            <input id="username" type="text" placeholder="Username" required /><br /><br />
+            <input id="email" type="email" placeholder="Email Address" required /><br /><br />
+            <input id="password" type="password" placeholder="Password" required /><br /><br />
+            <button class="btn" type="submit">Signup</button>
+        </form>
+        <p class="form-switch">Already have an account? <a href="login.html">Login here</a></p>
+        <div id="message"></div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const messageDiv = document.getElementById('message');
+
+        if (!username || !email || !password) {
+            messageDiv.textContent = 'Please fill out all fields.';
+            messageDiv.style.color = 'red';
+            return;
+        }
+
+        // Get existing users from localStorage or initialize an empty array
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Check if the email is already registered
+        const userExists = users.some(user => user.email === email);
+
+        if (userExists) {
+            messageDiv.textContent = 'An account with this email already exists.';
+            messageDiv.style.color = 'red';
+        } else {
+            // Add the new user
+            users.push({ username, email, password });
+            // Save the updated users array back to localStorage
+            localStorage.setItem('users', JSON.stringify(users));
+
+            messageDiv.textContent = 'Signup successful! Redirecting to login...';
+            messageDiv.style.color = 'green';
+            
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2000);
+        }
+    });
+</script>
+</body>
+</html>
