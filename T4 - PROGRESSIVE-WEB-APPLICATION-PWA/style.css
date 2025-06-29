@@ -1,0 +1,111 @@
+/* --- Base Styling --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff6347; /* Tomato */
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0.3rem 0 0;
+    font-size: 1.1rem;
+}
+
+main {
+    padding: 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Action Button --- */
+.actions {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#notifications-btn {
+    background-color: #4682b4; /* SteelBlue */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#notifications-btn:hover {
+    background-color: #366a92;
+}
+
+/* --- Product Grid Layout --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Product Card --- */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Card Content --- */
+.card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff6347;
+    margin-top: 0.5rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    #notifications-btn {
+        width: 100%;
+    }
+}
