@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari Om | Portfolio</title>
+
+  <!-- SEO & Meta -->
+  <meta name="description" content="Portfolio of Hari Om: Full-stack developer, designer, and creator.">
+  <meta name="keywords" content="Hari Om, Portfolio, Web Developer, Projects, Contact">
+  <meta name="author" content="Hari Om">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- GSAP (deferred for performance) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header_left">
+      <a href="#">Hari Om</a>
+    </div>
+    <nav class="header_right">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a id="github-link" href="#" target="_blank" rel="noopener">GitHub</a>
+      <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section gsap-section">
+      <div class="container">
+        <p class="hero-intro">Hello, I'm</p>
+        <h1 id="hero-name">Loading...</h1>
+        <p id="hero-role">Please wait...</p>
+        <div id="technologies-list" class="tech-badges"></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="gsap-section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div id="projects-container" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container section-animate gsap-section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-body">
+          <div id="about-photo" class="about-photo" role="img" aria-label="Photo of Hari Om"></div>
+          <div class="about-text">
+            <p id="about-text">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="gsap-section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <span id="contacts" class="contact-links"></span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      Made with <span style="color: red">&hearts;</span> —
+      <a id="footer-github" href="#" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>

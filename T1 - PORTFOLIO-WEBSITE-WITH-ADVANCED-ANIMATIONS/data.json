@@ -1,0 +1,51 @@
+{
+  "name": "Hari Om",
+  "role": "Full Stack Developer",
+  "image": "https://i.pinimg.com/736x/6a/fc/5c/6afc5c43a5050054d7482202e3b75239.jpg",
+  "about": "I am a passionate Full Stack Developer who enjoys building web applications that solve real-world problems. I specialize in modern JavaScript frameworks and love working on open-source projects.",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "Hari@example.com",
+      "href": "mailto:Hari@example.com"
+    },
+    {
+      "type": "linkedin",
+      "value": "linkedin.com/in/Hariom",
+      "href": "https://linkedin.com/in/Hariom"
+    },
+    {
+      "type": "github",
+      "value": "github.com/Hariom",
+      "href": "https://github.com/Hariom"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Weather App",
+      "description": "A weather app using OpenWeatherMap API.",
+      "image": "https://via.placeholder.com/400x200?text=Weather+App",
+      "live": "https://example.com/weather",
+      "github": "https://github.com/Hariom/weather-app"
+    },
+    {
+      "title": "Portfolio Site",
+      "description": "My portfolio using HTML, Tailwind, and GSAP.",
+      "image": "https://via.placeholder.com/400x200?text=Portfolio",
+      "live": "https://example.com/portfolio",
+      "github": "https://github.com/Hariom/portfolio"
+    }
+  ],
+  "technologies": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Tailwind CSS",
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Git",
+    "GitHub"
+  ]
+}
