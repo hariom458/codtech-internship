@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bun Real-Time Editor</title>
+</head>
+<body>
+  <h2>Collaborative Editor</h2>
+  <textarea id="editor" rows="20" cols="80" placeholder="Type here..."></textarea>
+
+  <script>
+    const socket = new WebSocket(`ws://${location.host}/ws`);
+    const textarea = document.getElementById("editor");
+    let localChange = false;
+
+    textarea.addEventListener("input", () => {
+      localChange = true;
+      socket.send(textarea.value);
+    });
+
+    socket.addEventListener("message", (event) => {
+      if (!localChange) {
+        textarea.value = event.data;
+      }
+      localChange = false;
+    });
+  </script>
+</body>
+</html>
